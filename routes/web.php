@@ -23,9 +23,9 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return  view('about', [
         "title" => "About",
-        "nama" => "Avriel",
-        "email" =>"www.google.com",
-        "gambar" =>"ale.jpg"
+        "nama" => "Grashela",
+        "email" =>"www.Haruto.com",
+        "gambar" =>"Haruto.jpg"
     ]);
 });
 Route::get('/gallery', function () {
