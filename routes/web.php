@@ -23,8 +23,8 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return  view('about', [
         "title" => "About",
-        "nama" => "Grashela",
-        "email" =>"www.Haruto.com",
+        "nama" => "Avriel",
+        "email" =>"",
         "gambar" =>"Haruto.jpg"
     ]);
 });

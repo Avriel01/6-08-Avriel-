@@ -18,11 +18,9 @@
       <textarea class="form-control" placeholder="Tinggalkan pesan disini" id="floatingTextarea2" style="height: 100px" name="pesan"></textarea>
       <label for="floatingTextArea2">Pesan</label>
   </div>
-<<<<<<< HEAD
-  <button type="button" class="btn btn-outline-info">Submit</button>
-=======
+ 
   <button type="submit" class="btn btn-outline-secondary">Submit</button>
->>>>>>> d007835 (modul4)
+
 </form>
 
 @endsection
