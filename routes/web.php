@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +17,8 @@ use App\Http\Controllers\ContactController;
 
 
 Route::get('/', function () {
-    return view('home', [
-        "title" => "Home"
+    return view('index', [
+        "title" => "Beranda"
     ]);
 });
 Route::get('/about', function () {
@@ -25,7 +26,7 @@ Route::get('/about', function () {
         "title" => "About",
         "nama" => "Avriel",
         "email" =>"",
-        "gambar" =>"Haruto.jpg"
+        "gambar" =>""
     ]);
 });
 Route::get('/gallery', function () {
@@ -35,3 +36,14 @@ Route::get('/gallery', function () {
 });
 
 Route::resource('/contacts', ContactController::class);
+
+Auth::routes();
+
+Route::group(['middleware' =>['auth']], function () {
+    Route::get('/home',[App\Http\Controllers\HomeController::class,'index']) ->name('home');
+    
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
